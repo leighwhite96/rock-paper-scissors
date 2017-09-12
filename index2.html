@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <script>
+      var cM = Math.random(1);
+      var pM = prompt("Enter Rock, Paper or Scissors - this is case sensitive!");
+
+      if (pM != "Rock" && pM != "Paper" && pM != "Scissors") {
+        console.log("Hey, that's not one of the options! Play the game properly, please :( ");
+      } else {
+          console.log("You chose " + pM + ". Nice choice...");
+        }
+
+
+      if(cM < 0.33) {
+          cM = "Rock";
+          console.log("I chose Rock");
+        } else if (cM < 0.66) {
+          cM = "Paper";
+          console.log("I chose Paper");
+        } else {
+          cM = "Scissors";
+          console.log("I chose Scissors");
+        }
+
+      function RPS(pM,cM) {
+
+            if (pM == cM) {
+                console.log("It's a Draw!");
+              } else if (pM == "Rock") {
+                  if (cM == "Scissors"){
+                      console.log("Congratulations, you win!");
+                    }
+                  else {
+                      console.log("Sorry, you're a loser! Better luck next time!");
+                    }
+                  }
+                  else if (pM == "Scissors") {
+                    if (cM == "Paper") {
+                      console.log("Congratulations, you win!");
+                  } else {
+                      console.log("Sorry, you're a loser! Better luck next time!");
+                    }
+                  }
+                  else  if (pM == "Paper") {
+                    if (cM == "Rock") {
+                      console.log("Congratulations, you win!");
+                  } else {
+                      console.log("Sorry, you're a loser! Better luck next time!");
+                  }
+                }
+              }
+
+        RPS(pM, cM);
+
+    </script>
+  </head>
+</html>
